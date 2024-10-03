@@ -1,7 +1,8 @@
 import "./App.css"
+import { Theme } from "@radix-ui/themes"
 import { Counter } from "./features/counter/Counter"
+import Ingredients from "./features/ingredients/Ingredients"
 import { Quotes } from "./features/quotes/Quotes"
-import logo from "./logo.svg"
 
 const App = () => {
   return (
@@ -61,6 +62,15 @@ const App = () => {
           </a>
         </span>
       </header> */}
+      <h1 className="text-3xl font-bold py-4">Kungkas Can Cook</h1>
+      <div className="container mx-auto p-4">
+        <div className="flex flex-col lg:flex-row gap-4">
+          <div className="w-full lg:w-1/2 p-4 bg-blue-200">
+            <Ingredients />
+          </div>
+          <div className="w-full lg:w-1/2 p-4 bg-blue-200">Receipts:</div>
+        </div>
+      </div>
     </div>
   )
 }

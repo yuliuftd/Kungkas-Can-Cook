@@ -4,6 +4,8 @@ import { Provider } from "react-redux"
 import App from "./App"
 import { store } from "./app/store"
 import "./index.css"
+import "@radix-ui/themes/styles.css"
+import { Theme } from "@radix-ui/themes"
 
 const container = document.getElementById("root")
 
@@ -13,7 +15,9 @@ if (container) {
   root.render(
     <React.StrictMode>
       <Provider store={store}>
-        <App />
+        <Theme>
+          <App />
+        </Theme>
       </Provider>
     </React.StrictMode>,
   )
